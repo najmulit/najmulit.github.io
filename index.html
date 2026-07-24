@@ -44,45 +44,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .email-section {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 50px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .email-section input {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 50px;
-            width: 250px;
-            font-size: 1em;
-            background: white;
-            color: #333;
-        }
-
-        .email-section input::placeholder {
-            color: #999;
-        }
-
-        .email-section button {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #6b2d5c 0%, #8b3a7a 100%);
-            color: white;
-            font-weight: 600;
-            font-size: 1em;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .email-section button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
         .countdown {
             display: flex;
             justify-content: center;
@@ -168,18 +129,6 @@
                 font-size: 1.1em;
             }
 
-            .email-section {
-                flex-direction: column;
-            }
-
-            .email-section input {
-                width: 100%;
-            }
-
-            .email-section button {
-                width: 100%;
-            }
-
             .countdown {
                 gap: 15px;
             }
@@ -204,11 +153,6 @@
     <div class="container">
         <h1>Coming Soon</h1>
         <p class="tagline">Get ready everyone! We are currently working on something awesome.</p>
-
-        <div class="email-section">
-            <input type="email" placeholder="Enter Your Email" id="emailInput">
-            <button onclick="notifyMe()">Notify Me</button>
-        </div>
 
         <div class="countdown">
             <div class="countdown-item">
@@ -264,24 +208,6 @@
         // Update countdown every second
         setInterval(updateCountdown, 1000);
         updateCountdown();
-
-        // Email notification
-        function notifyMe() {
-            const email = document.getElementById('emailInput').value;
-            if (email && email.includes('@')) {
-                alert('Thanks for signing up! We\'ll notify you soon.');
-                document.getElementById('emailInput').value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        }
-
-        // Allow Enter key to submit
-        document.getElementById('emailInput').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                notifyMe();
-            }
-        });
     </script>
 </body>
 </html>
