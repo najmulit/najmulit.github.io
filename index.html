@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najmulit - Developer</title>
+    <title>Get Ready - Coming Soon</title>
     <style>
         * {
             margin: 0;
@@ -12,201 +12,276 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
-            width: 100%;
+            background: linear-gradient(135deg, #1a9b8e 0%, #2eb8a8 50%, #3dd4c4 100%);
+            background-attachment: fixed;
             overflow: hidden;
         }
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .container {
+            text-align: center;
             color: white;
-            padding: 60px 40px;
-            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
-
-        main {
-            padding: 60px 40px;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        section h2 {
-            font-size: 1.8em;
+        h1 {
+            font-size: 3.5em;
             margin-bottom: 20px;
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .intro-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
+        .tagline {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .skill-tag {
-            background: #f0f4ff;
-            color: #667eea;
-            padding: 10px 15px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: 500;
-            border: 2px solid #667eea;
-        }
-
-        .links {
+        .email-section {
             display: flex;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 10px;
+            margin-bottom: 50px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn {
-            display: inline-block;
+        .email-section input {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            width: 250px;
+            font-size: 1em;
+            background: white;
+            color: #333;
+        }
+
+        .email-section input::placeholder {
+            color: #999;
+        }
+
+        .email-section button {
             padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #6b2d5c 0%, #8b3a7a 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-section button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(107, 45, 92, 0.4);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .countdown-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .btn-outline:hover {
-            background: #f0f4ff;
-        }
-
-        footer {
-            background: #f8f9fa;
-            text-align: center;
-            padding: 30px;
-            color: #666;
-            border-top: 1px solid #eee;
-        }
-
-        footer p {
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            margin: 0 20px;
             font-size: 0.95em;
         }
 
-        @media (max-width: 600px) {
-            header {
-                padding: 40px 20px;
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
             }
 
-            header h1 {
-                font-size: 2em;
+            .tagline {
+                font-size: 1.1em;
             }
 
-            main {
-                padding: 40px 20px;
-            }
-
-            section h2 {
-                font-size: 1.5em;
-            }
-
-            .skills {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
-
-            .links {
+            .email-section {
                 flex-direction: column;
             }
 
-            .btn {
+            .email-section input {
                 width: 100%;
-                text-align: center;
+            }
+
+            .email-section button {
+                width: 100%;
+            }
+
+            .countdown {
+                gap: 15px;
+            }
+
+            .countdown-item {
+                width: 80px;
+                height: 80px;
+            }
+
+            .countdown-number {
+                font-size: 2em;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Najmulit</h1>
-            <p>Full-Stack Developer & Open Source Enthusiast</p>
-        </header>
+        <h1>Get Ready...</h1>
+        <p class="tagline">Something really cool is coming!</p>
 
-        <main>
-            <section>
-                <h2>About Me</h2>
-                <p class="intro-text">
-                    Welcome to my portfolio! I'm a passionate developer with a focus on building clean, efficient, and scalable solutions. I enjoy working with modern technologies and contributing to open-source projects.
-                </p>
-            </section>
+        <div class="email-section">
+            <input type="email" placeholder="Enter Your Email" id="emailInput">
+            <button onclick="notifyMe()">Notify Me</button>
+        </div>
 
-            <section>
-                <h2>Skills & Technologies</h2>
-                <div class="skills">
-                    <div class="skill-tag">JavaScript</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">React</div>
-                    <div class="skill-tag">Node.js</div>
-                    <div class="skill-tag">Web Development</div>
-                    <div class="skill-tag">Git</div>
-                </div>
-            </section>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">DAYS</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">HOURS</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">MINUTES</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">SECONDS</div>
+            </div>
+        </div>
 
-            <section>
-                <h2>Get In Touch</h2>
-                <div class="links">
-                    <a href="https://github.com/najmulit" class="btn">GitHub</a>
-                    <a href="mailto:hello@najmulit.dev" class="btn btn-outline">Email</a>
-                </div>
-            </section>
-        </main>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+        </div>
 
-        <footer>
-            <p>&copy; 2026 Najmulit. All rights reserved.</p>
-        </footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+            <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+            <a href="https://youtube.com" target="_blank" title="YouTube">▶</a>
+        </div>
     </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date('2026-12-31').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Email notification
+        function notifyMe() {
+            const email = document.getElementById('emailInput').value;
+            if (email && email.includes('@')) {
+                alert('Thanks for signing up! We\'ll notify you soon.');
+                document.getElementById('emailInput').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('emailInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                notifyMe();
+            }
+        });
+    </script>
 </body>
 </html>
